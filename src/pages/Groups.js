@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Header from '../templates/Header';
+import Background from '../templates/Background';
 const Groups = () => {
   const [posts, setPosts] = useState([]);
 
@@ -18,20 +19,21 @@ const Groups = () => {
 
   return (
     <>
-      <Header />
-      <div className='text-center'>
-        <h1 className='text-4xl font-bold text-blue-500'>Grupper</h1>
-        <ul>
-          {posts.map((post) => (
-            <li key={post.id}>
-              <h2>{post.title.rendered}</h2>
-              <div
-                dangerouslySetInnerHTML={{ __html: post.content.rendered }}
-              />
-            </li>
-          ))}
-        </ul>
-      </div>
+      <Background>
+        <Header title='Grupper' />
+        <div className='text-center'>
+          <ul>
+            {posts.map((post) => (
+              <li key={post.id}>
+                <h2>{post.title.rendered}</h2>
+                <div
+                  dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Background>
     </>
   );
 };

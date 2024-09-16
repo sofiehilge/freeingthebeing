@@ -1,11 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-#root {
-  max-width: 375px;
-  font-family: 'Poppins', sans-serif;
-}
 
 body,
 html {
@@ -13,19 +9,29 @@ html {
   margin: 0;
   padding: 0;
 }
+
+figure,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+
+}
+
 /* Burgermenu */
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
-  width: 21px;
-  height: 15px;
-  right: 42px;
-  top: 58px;
+  width: 25px;
+  height: 25px;
+
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #898989 padding-box;
+  background: #472237;
   height: 3px;
   border-radius: 25px;
 }
@@ -38,7 +44,7 @@ html {
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #898989;
+  background: #472237;
 }
 
 /*
@@ -52,7 +58,7 @@ html {
 
 /* General sidebar styles */
 .bm-menu {
-  background: white;
+  background: #fad6d2;
   font-size: 1.15em;
   right: 0;
   width: 100%;
@@ -66,14 +72,10 @@ html {
 .bm-menu.bm-menu-open .bm-overlay {
   max-width: 100%;
 }
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #f1c40e;
-}
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: black;
+  color: #472237;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,7 +86,8 @@ html {
 .bm-item {
   display: inline-block;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Baskervville', serif;
+  text-transform: uppercase;
   font-size: 24px;
   line-height: 24px;
   padding-top: 48px;

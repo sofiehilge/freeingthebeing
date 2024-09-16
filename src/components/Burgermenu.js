@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { slide as Menu } from 'react-burger-menu';
+import { stack as Menu } from 'react-burger-menu';
 
 const Burgermenu = () => {
   const [isClicked, setIsClicked] = useState(false);
